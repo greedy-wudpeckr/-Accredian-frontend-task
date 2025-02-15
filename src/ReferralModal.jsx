@@ -8,7 +8,7 @@ function ReferralModal({ isOpen, onClose }) {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = async(data) => {
-    const req = await axios.post("https://a-be.onrender.com",{
+    const req = await axios.post("https://a-be.onrender.com/api/referrals",{
       yourName: data.yourName,
       yourEmail: data.yourEmail,
       friendName: data.friendName,
